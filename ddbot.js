@@ -9,6 +9,16 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
+	if (!message.content.startsWith(prefix) || message.author.bot) return;
+const args = message.content.slice(prefix.length).split(/ +/);
+const command = args.shift().toLowerCase();
+
+	if (command = 'args-info') {
+	if (!args.length_ {
+	    return message.channel.send(`argument error, ${message.author}!`);
+}
+message.channel.send(`command name: ${command}`nArguments: ${args}`);
+}
 	if (message.content.startsWith(`${prefix}ping`)) {
 	message.channel.send('Pong.');
 } else if (message.content.startsWith(`${prefix}beep`)) {
